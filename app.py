@@ -46,7 +46,7 @@ def simulate_symbolic_dynamics(theta, entropy, steps=20):
 # ----------------------------
 
 st.set_page_config(page_title="Hawking Fusion Simulator", layout="wide")
-st.title("🕳️ Hawking Radiation: Symbolic + Physical Fusion")
+st.title("Hawking Radiation: Symbolic + Physical Fusion")
 st.markdown("Model real and symbolic radiation from identity collapse or black hole evaporation.")
 
 # Sidebar controls
@@ -69,7 +69,7 @@ power = estimate_radiation_power(mass_kg)
 remaining_mass = compute_mass_decay(mass_kg, time_elapsed)
 
 # Layout
-st.subheader("📊 Symbolic Identity Dynamics")
+st.subheader("Symbolic Identity Dynamics")
 col1, col2 = st.columns(2)
 with col1:
     st.metric("Final Coherence γ", f"{gammas[-1]:.3f}")
@@ -77,9 +77,9 @@ with col1:
 with col2:
     st.metric("Karmic Load K", f"{karmic[-1]:.3f}")
     if rhos[-1] > 2.5:
-        st.error("⚠️ Symbolic Attractor Collapsing")
+        st.error("Symbolic Attractor Collapsing")
     elif rhos[-1] > 1.0:
-        st.warning("⚠️ Symbolic Leakage Increasing")
+        st.warning("Symbolic Leakage Increasing")
     else:
         st.success("System Coherent")
 
@@ -94,7 +94,7 @@ ax.legend()
 st.pyplot(fig)
 
 # Physical model
-st.subheader("🌌 Physical Hawking Parameters")
+st.subheader("Physical Hawking Parameters")
 col3, col4 = st.columns(2)
 with col3:
     st.metric("Schwarzschild Radius", f"{radius:.2e} m")
